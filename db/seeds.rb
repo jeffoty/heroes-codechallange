@@ -11,9 +11,6 @@ power2 = Power.create(name: "Sharingan", description: "Able to perform different
 power3 = Power.create(name: "Speed", description: "Able to run at super speed")
 
 
-HeroPower.all.each do |heropower|
-    rand(1..5).times do
-    power = Power.find(Power.pluck(:id).sample)
-    HeroPower.create(strength: "Average", hero_id: 3, power_id: 3)
-  end
-end
+HeroPower.create(strength: "Average", hero_id: 1, power_id: 1)
+HeroPower.create(strength: "Average", hero_id: 2, power_id: 2)
+HeroPower.create(strength: "Average", hero_id: 3, power_id: 3)   

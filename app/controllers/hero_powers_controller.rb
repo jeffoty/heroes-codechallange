@@ -1,8 +1,9 @@
 class HeroPowersController < ApplicationController
     
     def create
+        hero = Hero.find(params[:hero_id])
         heropower = HeroPower.create!(heropower_params)
-        render json: heropower
+        render json: hero, serializer: SinglePowerSerializer
     end
 
     private
